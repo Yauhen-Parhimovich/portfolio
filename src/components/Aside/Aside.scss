@@ -1,0 +1,14 @@
+@import "../../styles/variables";
+
+.aside {
+  flex: 0 0 20%;
+  background: darkgray;
+  position: relative;
+  z-index: 100;
+}
+
+@media (max-width: $breakpoint-l) {
+  .aside {
+    display: none;
+  }
+}

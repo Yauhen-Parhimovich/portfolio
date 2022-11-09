@@ -1,0 +1,21 @@
+@import "../../styles/variables";
+
+.wrapper {
+  display: flex;
+  min-height: 100vh;
+}
+
+.burger {
+
+}
+
+.main {
+  flex: 0 0 80%;
+  padding: 10px;
+}
+
+@media (max-width: $breakpoint-l) {
+  .wrapper {
+    display: block;
+  }
+}
