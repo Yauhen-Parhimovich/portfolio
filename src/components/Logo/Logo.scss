@@ -1,0 +1,85 @@
+.logo {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+
+  &:hover {
+    &::before {
+      inset: -10px 0px;
+    }
+
+    & .logo__image {
+      opacity: 0;
+    }
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: -10px 70px;
+    background: linear-gradient(315deg, #00ccff, #d400d4);
+    transition: 0.5s;
+    animation: animate 4s linear infinite;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 3px;
+    border-radius: 50%;
+    z-index: 1;
+    background: darkgray;
+  }
+
+  &__content {
+    position: absolute;
+    inset: 10px;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    z-index: 3;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: 0.5s;
+    pointer-events: none;
+    z-index: 5;
+  }
+
+  &__link {
+    font-size: 28px;
+    font-weight: 700;
+    color: #fff;
+  }
+
+  &__wrapper {
+    width: 100%;
+    height: 230px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+

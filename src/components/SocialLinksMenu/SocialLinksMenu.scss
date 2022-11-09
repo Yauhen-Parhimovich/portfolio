@@ -1,0 +1,27 @@
+@import "../../styles/variables";
+
+.social-links {
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin-top: 20px;
+  }
+  &__item {
+    & + .social-links__item {
+      margin-left: 20px;
+    }
+  }
+  &__link {
+
+  }
+  &__icon {
+    width: 16px;
+    height: 16px;
+    transition: 0.2s;
+    &:hover {
+      fill: $contrast-text-color;
+    }
+  }
+}
