@@ -6,20 +6,30 @@
 
 @media (max-width: $breakpoint-l) {
   .burger-menu {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     top: 0;
-    right: 0;
+    right: 100%;
     bottom: 0;
-    width: 300px;
+    width: 100%;
+    transition: 0s;
     z-index: 100;
+    &_is-active-true {
+      right: 0;
+    }
+    &_is-active-false {
+      transition-delay: 1s;
+
+    }
   }
   .background {
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
-    width: 300px;
+    width: 100%;
     background: #fff;
     z-index: 1000;
   }

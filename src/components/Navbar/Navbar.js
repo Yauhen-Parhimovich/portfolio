@@ -25,10 +25,10 @@ const Navbar = () => {
           <li className="navigation__item">
             <NavLink
               className="navigation__link"
-              to="/skills"
+              to="/experience"
             >
-              Skills
-              <span className="navigation__link-before">Skills</span>
+              Experience
+              <span className="navigation__link-before">Experience</span>
             </NavLink>
           </li>
           <li className="navigation__item">

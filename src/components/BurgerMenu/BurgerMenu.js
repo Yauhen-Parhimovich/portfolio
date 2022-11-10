@@ -9,7 +9,7 @@ import './BurgerMenu.scss';
 
 const sidebar = {
   open: (height = 1000) => ({
-    clipPath: `circle(${height * 2 + 200 - 5}px at 220px 55px)`,
+    clipPath: `circle(${height * 2 + 200 - 5}px at 92% 8%)`,
     transition: {
       type: 'spring',
       stiffness: 20,
@@ -17,7 +17,7 @@ const sidebar = {
     }
   }),
   closed: {
-    clipPath: 'circle(0px at 220px 55px)',
+    clipPath: 'circle(0px at 92% 8%)',
     transition: {
       delay: 0.5,
       type: 'spring',
@@ -34,10 +34,16 @@ const BurgerMenu = () => {
   const containerRef = useRef(null);
   const {height} = useDimensions(containerRef);
 
+  const handleClick = () => {
+    toggleOpen()
+  }
+
+  const style = ['burger-menu', `burger-menu_is-active-${isOpen}`]
+
 
   return (
     <motion.nav
-      className="burger-menu"
+      className={style.join(' ')}
       initial={false}
       animate={isOpen ? 'open' : 'closed'}
       custom={height}
@@ -45,7 +51,7 @@ const BurgerMenu = () => {
     >
       <motion.div className="background" variants={sidebar}/>
       <BurgerNavigation/>
-      <BurgerButton toggle={() => toggleOpen()}/>
+      <BurgerButton toggle={handleClick}/>
     </motion.nav>
   );
 };

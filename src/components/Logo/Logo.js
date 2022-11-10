@@ -10,7 +10,7 @@ const Logo = () => {
     <div className="logo__wrapper">
       <div className="logo">
         <div className="logo__content">
-          <img className="logo__image" src={Photo} alt="photo"/>
+          <img className="logo__image" src={Photo} alt="logo"/>
           <Link className="logo__link" to="/">
             Main page
           </Link>

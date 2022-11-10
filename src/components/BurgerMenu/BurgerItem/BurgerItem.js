@@ -23,12 +23,12 @@ const variants = {
 const BurgerItem = ({path, value}) => {
   return (
     <motion.li
-      className="burger-item"
+      className="burger-navigation__item"
       variants={variants}
       whileHover={{scale: 1.1}}
       whileTap={{scale: 0.95}}
     >
-      <NavLink to={path}>
+      <NavLink to={path} className='burger-navigation__link'>
         {value}
       </NavLink>
     </motion.li>

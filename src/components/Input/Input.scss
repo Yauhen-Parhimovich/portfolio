@@ -1,0 +1,79 @@
+.input, .textarea {
+  position: relative;
+  width: 100%;
+  padding: 20px 10px 10px;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #23242a;
+  font-size: 18px;
+  z-index: 10;
+
+  &_validate-true ~ .input-placeholder,
+  &:focus ~ .input-placeholder {
+    color: #45f3ff;
+    transform: translate(-10px, -38px);
+    font-size: 14px;
+  }
+
+  &_validate-true ~ .input-helpers,
+  &:focus ~ .input-helpers {
+    height: 100%;
+  }
+
+  &-box {
+    position: relative;
+    width: 300px;
+
+    & + .input-box {
+      margin-top: 20px;
+    }
+  }
+
+  &-placeholder {
+    position: absolute;
+    left: 0;
+    padding: 20px 10px 10px;
+    font-size: 18px;
+    color: #8f8f8f;
+    pointer-events: none;
+    transition: 0.5s;
+  }
+
+  &-helpers {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: #45f3ff;
+    border-radius: 4px;
+    transition: 0.5s;
+    pointer-events: none;
+    z-index: 9;
+  }
+}
+
+.textarea {
+  resize: none;
+  padding: 5px;
+  height: 100px;
+  margin-bottom: 10px;
+
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #999;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #666;
+    border-radius: 5px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+}

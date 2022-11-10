@@ -146,7 +146,7 @@ const useCanvas = () => {
     }
 
     function createParticles(x, y) {
-      let particleCount = 30;
+      let particleCount = 50;
       while (particleCount--) {
         particles.push(new Particle(x, y));
       }
@@ -199,16 +199,24 @@ const useCanvas = () => {
     });
 
     canvas.addEventListener('mousedown', function (event) {
-      event.preventDefault();
       mousedown = true;
     });
 
     canvas.addEventListener('mouseup', function (event) {
-      event.preventDefault();
       mousedown = false;
     });
 
+    canvas.addEventListener('click', () => {
+      mousedown = true;
+      setTimeout(() => {
+        mousedown = false;
+      }, 0)
+    })
+
     loop();
+
+
+
 
   }, []);
 };

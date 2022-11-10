@@ -1,0 +1,68 @@
+.contacts-form {
+  position: absolute;
+  inset: 2px;
+  border-radius: 8px;
+  background: #28292d;
+  z-index: 10;
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    color: #45f3ff;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 1px;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  &__button {
+    margin-top: 20px;
+    align-self: flex-start;
+  }
+
+  &__box {
+    position: relative;
+    width: 380px;
+    min-height: 470px;
+    background: #1c1c1c;
+    border-radius: 8px;
+    overflow: hidden;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      transform-origin: bottom right;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(0deg, transparent, #45f3ff, #45f3ff);
+      animation: animate 6s linear infinite;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      transform-origin: bottom right;
+      width: 380px;
+      height: 420px;
+      background: linear-gradient(0deg, transparent, #45f3ff, #45f3ff);
+      animation: animate 6s linear infinite;
+      animation-delay: -3s;
+    }
+  }
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+
+}

@@ -1,4 +1,19 @@
-.burger-item {
-  position: relative;
-  z-index: 10000;
+.burger-navigation {
+  &__item {
+    position: relative;
+    z-index: 10000;
+    padding: 10px;
+    font-size: 28px;
+    font-weight: 700;
+    & + .burger-navigation__item {
+      margin-top: 20px;
+    }
+  }
+  &__link {
+    color: black;
+    &.active {
+      color: darkgoldenrod;
+    }
+  }
+
 }

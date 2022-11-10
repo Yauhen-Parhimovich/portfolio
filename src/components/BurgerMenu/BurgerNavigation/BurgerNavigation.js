@@ -1,8 +1,9 @@
-import React from 'react';
 import {motion} from 'framer-motion';
-import './BurgerNavigation.scss'
+
 import BurgerItem from '../BurgerItem/BurgerItem';
 import {router} from '../../../router';
+
+import './BurgerNavigation.scss'
 
 const BurgerNavigation = () => {
 
@@ -19,6 +20,7 @@ const BurgerNavigation = () => {
     <div className='burger-navigation'>
       <motion.ul
         variants={variants}
+        className='burger-navigation__list'
       >
         {router.map(route => {
           return (
