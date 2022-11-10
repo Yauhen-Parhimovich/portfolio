@@ -10,7 +10,7 @@
 }
 
 .main {
-  flex: 0 0 80%;
+  position: relative;
 }
 
 @media (max-width: $breakpoint-l) {

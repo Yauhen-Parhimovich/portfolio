@@ -1,2 +1,18 @@
 .main {
+  position: relative;
+  width: 100%;
+  &-section {
+    min-height: 100vh;
+    padding: 30px 10px;
+    position: relative;
+    &__wrapper {
+      position: relative;
+      z-index: 2;
+    }
+  }
+}
+.content {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
