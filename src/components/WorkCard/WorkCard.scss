@@ -1,3 +1,5 @@
+@import "../../styles/variables";
+
 .work-card {
   position: relative;
   width: 300px;
@@ -16,7 +18,7 @@
     left: -4px;
     right: -4px;
     transform: skew(2deg, 4deg);
-    background: linear-gradient(315deg, #00ccff, #0e1438, #d400d4);
+    background: linear-gradient(315deg, $neon-color, #0e1438, $contrast-color-1);
   }
   &::after {
     content: '';
@@ -27,7 +29,7 @@
     right: -4px;
     transform: skew(2deg, 4deg);
     filter: blur(50px);
-    background: linear-gradient(315deg, #00ccff, #0e1438, #d400d4);
+    background: linear-gradient(315deg, $neon-color, #0e1438, $contrast-color-1);
   }
   &__content {
     position: absolute;

@@ -1,3 +1,5 @@
+@import "../../styles/variables";
+
 .logo {
   position: relative;
   width: 200px;
@@ -20,7 +22,7 @@
     content: '';
     position: absolute;
     inset: -10px 70px;
-    background: linear-gradient(315deg, #00ccff, #d400d4);
+    background: linear-gradient(315deg, $contrast-color-2, $contrast-color-1);
     transition: 0.5s;
     animation: animate 4s linear infinite;
   }

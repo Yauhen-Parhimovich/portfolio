@@ -8,8 +8,7 @@ const Portfolio = () => {
 
   return (
     <section className="portfolio">
-      <Gallery
-      />
+      <Gallery/>
     </section>
 
   );

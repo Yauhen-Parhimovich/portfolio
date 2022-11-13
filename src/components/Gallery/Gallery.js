@@ -1,5 +1,5 @@
 import './Gallery.scss';
-import {images} from '../../data/galary';
+import {images} from '../../data/gallery';
 import {useEffect} from 'react';
 import {ExplosionGallery} from './index';
 

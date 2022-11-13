@@ -1,3 +1,4 @@
+@import "../../styles/variables";
 
 .contacts-form {
   position: absolute;
@@ -10,7 +11,7 @@
   flex-direction: column;
 
   &__title {
-    color: #45f3ff;
+    color: $contrast-color-2;
     font-weight: 500;
     text-align: center;
     letter-spacing: 1px;
@@ -39,7 +40,7 @@
       transform-origin: bottom right;
       width: 100%;
       height: 100%;
-      background: linear-gradient(0deg, transparent, #45f3ff, #45f3ff);
+      background: linear-gradient(0deg, transparent, $contrast-color-2, $contrast-color-2);
       animation: animate 6s linear infinite;
     }
 
@@ -51,7 +52,7 @@
       transform-origin: bottom right;
       width: 380px;
       height: 420px;
-      background: linear-gradient(0deg, transparent, #45f3ff, #45f3ff);
+      background: linear-gradient(0deg, transparent, $contrast-color-2, $contrast-color-2);
       animation: animate 6s linear infinite;
       animation-delay: -3s;
     }

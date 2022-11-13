@@ -1,3 +1,5 @@
+@import "../../../styles/variables";
+
 .burger-button {
   background: none;
   border: none;
@@ -5,4 +7,10 @@
   top: 7%;
   right: 5%;
   z-index: 100000;
+
+  &__icon {
+    path {
+      stroke: $contrast-color-2;
+    }
+  }
 }

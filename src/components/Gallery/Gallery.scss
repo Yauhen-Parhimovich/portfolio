@@ -219,19 +219,19 @@
 }
 
 .explosionNavPrev {
-  background: red;
+  background: $contrast-color-2;
 }
 
 .explosionNavPrev:hover {
-  background: black;
+  background: $contrast-color-1;
 }
 
 .explosionNavNext {
-  background: red;
+  background: $contrast-color-2;
 }
 
 .explosionNavNext:hover {
-  background: black;
+  background: $contrast-color-1;
 }
 
 .explosionCounter {

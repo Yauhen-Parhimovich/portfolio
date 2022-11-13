@@ -1,3 +1,5 @@
+@import "../../../styles/variables";
+
 .burger-navigation {
   &__item {
     position: relative;
@@ -12,7 +14,7 @@
   &__link {
     color: black;
     &.active {
-      color: darkgoldenrod;
+      color: $contrast-color-1;
     }
   }
 

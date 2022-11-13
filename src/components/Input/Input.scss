@@ -1,3 +1,5 @@
+@import "../../styles/variables";
+
 .input, .textarea {
   position: relative;
   width: 100%;
@@ -11,7 +13,7 @@
 
   &_validate-true ~ .input-placeholder,
   &:focus ~ .input-placeholder {
-    color: #45f3ff;
+    color: $contrast-color-2;
     transform: translate(-10px, -38px);
     font-size: 14px;
   }
@@ -46,7 +48,7 @@
     bottom: 0;
     width: 100%;
     height: 2px;
-    background: #45f3ff;
+    background: $contrast-color-2;
     border-radius: 4px;
     transition: 0.5s;
     pointer-events: none;

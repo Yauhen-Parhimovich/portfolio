@@ -6,6 +6,7 @@ const Greeting = ({text}) => {
 
   return (
     <div className='greeting__wrapper'>
+
       <div className="greeting">
       {/*<video className='greeting__video' src={video} autoPlay muted/>*/}
         {greeting.map((item, index) => (
@@ -13,6 +14,7 @@ const Greeting = ({text}) => {
         ))}
       </div>
     </div>
+
   );
 };
 

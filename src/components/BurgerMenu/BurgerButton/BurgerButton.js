@@ -25,7 +25,7 @@ const BurgerButton = ({toggle, ...props}) => {
   };
   return (
     <button onClick={onClick} className="burger-button" {...props}>
-      <svg width="40" height="40" viewBox="0 0 40 40">
+      <svg className='burger-button__icon' width="40" height="40" viewBox="0 0 40 40">
         <motion.path
           stroke={'red'}
           animate={animation}

@@ -1,10 +1,12 @@
+@import "../../styles/variables";
+
 .button {
   background: transparent;
   margin-left: 20px;
   position: relative;
   display: inline-block;
   padding: 10px 20px;
-  border: 2px solid #45f3ff;
+  border: 2px solid $contrast-color-2;
   text-transform: uppercase;
   font-weight: 600;
   text-decoration: none;
@@ -20,24 +22,24 @@
   &:hover {
     transition-delay: 1.5s;
     color: #000;
-    box-shadow: 0 0 10px #45f3ff,
-                0 0 20px #45f3ff,
-                0 0 40px #45f3ff,
-                0 0 60px #45f3ff;
+    box-shadow: 0 0 10px $contrast-color-2,
+                0 0 20px $contrast-color-2,
+                0 0 40px $contrast-color-2,
+                0 0 60px $contrast-color-2;
     &::before {
       width: 60%;
       height: 104%;
       left: -2px;
-      box-shadow: 5px 0 0 #45f3ff,
-                  5px 0 0 #45f3ff;
+      box-shadow: 5px 0 0 $contrast-color-2,
+                  5px 0 0 $contrast-color-2;
       transition-delay: 0s, 0.5s, 1s, 1s;
     }
     &::after {
       width: 60%;
       height: 104%;
       right: -2px;
-      box-shadow: -5px 0 0 #45f3ff,
-                  -5px 0 0 #45f3ff;
+      box-shadow: -5px 0 0 $contrast-color-2,
+                  -5px 0 0 $contrast-color-2;
       transition-delay: 0s, 0.5s, 1s, 1s;
 
     }
@@ -50,9 +52,9 @@
     transform: translateY(-50%);
     width: 20px;
     height: 2px;
-    background: #45f3ff;
-    box-shadow: 5px -8px 0 #45f3ff,
-                5px 8px 0 #45f3ff;
+    background: $contrast-color-2;
+    box-shadow: 5px -8px 0 $contrast-color-2,
+                5px 8px 0 $contrast-color-2;
     transition: width 0.5s, left 0.5s, height 0.5s, box-shadow 0.5s;
     transition-delay: 1s, 0.5s, 0s, 0s;
   }
@@ -64,9 +66,9 @@
     transform: translateY(-50%);
     width: 20px;
     height: 2px;
-    background: #45f3ff;
-    box-shadow: -5px -8px 0 #45f3ff,
-                -5px 8px 0 #45f3ff;
+    background: $contrast-color-2;
+    box-shadow: -5px -8px 0 $contrast-color-2,
+                -5px 8px 0 $contrast-color-2;
     transition: width 0.5s, left 0.5s, height 0.5s, box-shadow 0.5s;
     transition-delay: 1s, 0.5s, 0s, 0s;
   }
