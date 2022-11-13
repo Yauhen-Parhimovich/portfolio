@@ -1,6 +1,7 @@
-import './ContactForm.scss';
 import Input from '../Input/Input';
 import Button from '../Button/Button';
+
+import './ContactForm.scss';
 
 const ContactForm = () => {
   return (

@@ -2,12 +2,12 @@ import './Title.scss';
 
 const Title = ({className, children}) => {
 
-  const style = [className, 'title'];
+  const style = [className, 'title__box'];
 
   return (
-    <div className="title__box">
+    <div  className={style.join(' ')}>
       <div className="title__top-layer"></div>
-      <h2 className={style.join(' ')}>
+      <h2 className="title">
         {children}
       </h2>
     </div>

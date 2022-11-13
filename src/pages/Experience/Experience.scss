@@ -1,5 +1,9 @@
 .experience {
   padding: 20px 10px;
+
+  &__title {
+      padding: 20px;
+  }
   &__content {
     display: flex;
     gap: 10px;

@@ -9,7 +9,7 @@ import './BurgerMenu.scss';
 
 const sidebar = {
   open: (height = 1000) => ({
-    clipPath: `circle(${height * 2 + 200 - 5}px at 92% 8%)`,
+    clipPath: `circle(${height * 3 + 200 - 5}px at 92% 8%)`,
     transition: {
       type: 'spring',
       stiffness: 20,

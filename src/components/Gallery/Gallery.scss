@@ -1,0 +1,241 @@
+@import "../../styles/variables";
+
+.gallery {
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+.galleryItem {
+  display: inline-block;
+  width: 24%;
+  padding-bottom: 29%;
+  height: 0;
+  position: relative;
+  vertical-align: top;
+  opacity: 0;
+}
+
+.card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: block;
+  color: #fff;
+}
+
+.card:hover,
+.card:visited {
+  color: #fff
+}
+
+.cardContent,
+.cardHover,
+.cardImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%
+}
+
+.cardImage {
+  object-fit: cover;
+  z-index: 1;
+  transform: scale(1);
+  transition: transform 3s;
+}
+
+.cardHover {
+  z-index: 1;
+  background: rgba(0, 0, 0, .7);
+  opacity: 0;
+  transition: all .3s
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  padding: 2rem;
+  box-sizing: border-box;
+  opacity: 0;
+  transition: all .3s
+}
+
+.cardTitle {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  text-align: center;
+  margin-bottom: .2em;
+  color: #daa35b
+}
+
+.card:hover .cardContent,
+.card:hover .cardHover {
+  opacity: 1
+}
+
+.card:hover .cardImage {
+  transform: scale(1.2);
+
+}
+
+.explosion {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: #140F0B;
+  min-width: 1023px;
+  min-height: 600px;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+  color: #000;
+  overflow: hidden;
+  transform: translateX(-5%);
+
+  @media (max-width: $breakpoint-l) {
+    left: 0;
+  }
+}
+
+.explosion_Opened {
+  display: block
+}
+
+.explosion_Opening {
+  display: block
+}
+
+.explosion_Opening .explosionImage {
+  transition: none
+}
+
+.explosionImage {
+  position: absolute;
+  width: 500px;
+  object-fit: cover;
+  display: block;
+  z-index: 2;
+  height: auto;
+  transform: translate3d(0, 0, 0) scale(1);
+  transform-origin: 50% 50%;
+  backface-visibility: hidden;
+  transition: transform .7s, opacity .7s
+}
+
+.explosionControls {
+  display: flex;
+  flex-direction: column;
+  width: 3rem;
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+  z-index: 7;
+  justify-content: center;
+  right: 22%;
+  height: 400px
+}
+
+.explosionSummary {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 9;
+  background: #2e5051;
+  transition: width .7s;
+  color: #fff;
+  width: 0;
+  overflow: hidden
+}
+
+.explosionSummaryContent {
+  padding: .5rem 5rem;
+  opacity: 1;
+  white-space: nowrap;
+  transition: opacity .3s
+}
+
+.explosionTitle {
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: .1em
+}
+
+.explosionDescription {
+  color: #daa35b
+}
+
+.explosionClose {
+  position: absolute;
+  top: 0;
+  width: 3rem;
+  height: 3rem;
+  border: none;
+  background: 0 0;
+  background-size: 80%;
+  background: green;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer
+}
+
+.explosionNavs {
+  display: flex;
+  flex-direction: column;
+  align-items: center
+}
+
+.explosionNav {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  border: 3px solid #000;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-position: center;
+  cursor: pointer;
+  text-align: center;
+  opacity: 1;
+  transition: background-color .5s opacity .5s
+}
+
+.explosionNav:hover {
+  background-color: #000
+}
+
+.explosionNav:disabled {
+  pointer-events: none;
+  opacity: .3
+}
+
+.explosionNavPrev {
+  background: red;
+}
+
+.explosionNavPrev:hover {
+  background: black;
+}
+
+.explosionNavNext {
+  background: red;
+}
+
+.explosionNavNext:hover {
+  background: black;
+}
+
+.explosionCounter {
+  font-weight: 700;
+  font-size: 1.2rem;
+  padding: 1rem 0
+}

@@ -9,12 +9,15 @@ const Contacts = () => {
 
   return (
     <section className="contacts">
-      <Title className='contacts__title'>Contacts</Title>
       <div className="contacts__content">
         <div className="contacts__form">
+          <Title className='contacts__title'>Contacts</Title>
           <ContactForm/>
         </div>
         <div className="contacts__map">
+          <div className="contacts__info">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda commodi cupiditate dolor doloremque est eum expedita explicabo iure iusto, laudantium modi nam nobis numquam quisquam, sequi sunt suscipit velit voluptatibus?
+          </div>
           <Map/>
         </div>
       </div>

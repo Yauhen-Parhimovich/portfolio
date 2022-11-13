@@ -1,0 +1,23 @@
+.leaflet-div-icon {
+  background: transparent;
+  border: none;
+  animation: animateIcon 2s linear infinite;
+  position: relative;
+}
+
+.map {
+  min-height: 100%;
+}
+
+@keyframes animateIcon {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: -8px;
+  }
+  100% {
+    top: 0;
+  }
+
+}

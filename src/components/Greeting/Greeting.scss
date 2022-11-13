@@ -1,0 +1,30 @@
+.greeting {
+
+  &__wrapper {
+
+  }
+
+  &__item {
+
+  }
+
+  &__video {
+
+  }
+}
+
+@for $i from 1 through 50 {
+  .greeting__item:nth-child(#{$i}) {
+    animation-delay: 4.1s + $i * 1s;
+  }
+}
+
+@keyframes animateGreeting {
+  0% {
+
+  }
+
+  100% {
+
+  }
+}

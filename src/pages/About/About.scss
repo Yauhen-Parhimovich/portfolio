@@ -1,5 +1,7 @@
 .about {
   padding: 20px 10px;
+  overflow-x: hidden;
+
   &__content {
     display: flex;
     gap: 10px;
@@ -10,7 +12,19 @@
     flex: 0 0 45%;
   }
 
-  &__skills {
+  &__firms {
     flex: 0 0 45%;
+    &-list {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-top: 40px;
+    }
+    &-item {
+      margin: 0 auto;
+      & + .about__firms-item {
+        margin-top: 55px;
+      }
+    }
   }
 }

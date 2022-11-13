@@ -3,6 +3,7 @@ import Layout from '../../HOC/Layout/Layout';
 import './Main.scss';
 import AnimateBackground from '../../components/AnimateBackground/AnimateBackground';
 import Title from '../../components/Title/Title';
+import Greeting from '../../components/Greeting/Greeting';
 
 const Main = () => {
 
@@ -13,10 +14,19 @@ const Main = () => {
         <section className="main-section">
           <AnimateBackground/>
           <div className="main-section__wrapper">
-            <h2>Hi!</h2>
-            <p>i'm Yauhen Parkhimovich</p>
-            <p>Frontend developer</p>
-            <p>You are welcome on my site!</p>
+            <Greeting
+              text='Hi!'
+            />
+            <Greeting
+              text="I'm Yauhen Parkhimovich!"
+            />
+            <Greeting
+              text="Frontend developer"
+            />
+            <Greeting
+              text="You are welcome on my site!"
+            />
+
           </div>
 
         </section>
