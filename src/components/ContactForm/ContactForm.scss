@@ -17,6 +17,15 @@
     letter-spacing: 1px;
     font-size: 24px;
     margin-bottom: 10px;
+    @media (max-width: $breakpoint-m) {
+      font-size: 22px;
+    }
+    @media (max-width: $breakpoint-m) {
+      font-size: 20px;
+    }
+    @media (max-width: $breakpoint-m) {
+      font-size: 18px;
+    }
   }
 
   &__button {
@@ -31,7 +40,16 @@
     background: #1c1c1c;
     border-radius: 8px;
     overflow: hidden;
-
+    margin: 0 auto;
+    @media (max-width: $breakpoint-m) {
+      max-width: 450px;
+    }
+    @media (max-width: $breakpoint-s) {
+      max-width: 400px;
+    }
+    @media (max-width: $breakpoint-xs) {
+      max-width: 350px;
+    }
     &::before {
       content: '';
       position: absolute;

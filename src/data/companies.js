@@ -2,11 +2,11 @@
 export const firms = [
   {
     id: 1,
-    name: 'Freelance',
-    jobTitle: 'Frontend developer | HTML coder',
+    name: 'Web Studio',
+    jobTitle: 'Frontend developer',
     startWork: 'September 2020',
-    endWork: 'February 2022',
-    description: 'Создавал множество кросбраузерной и адаптивной верстки'
+    endWork: 'October 2021',
+    description: 'Создание лендингов, интернет-магазинов и небольших SPA'
   },
   {
     id: 2,
@@ -14,7 +14,7 @@ export const firms = [
     jobTitle: 'Frontend developer',
     startWork: 'November 2021',
     endWork: 'May 2022',
-    description: 'Разработал несколько приложений на React, в том числе одно мобильное'
+    description: 'Разработка SalesForce продуктов'
 
   },
   {
@@ -23,7 +23,7 @@ export const firms = [
     jobTitle: 'Frontend developer',
     startWork: 'May 2022',
     endWork: 'currently',
-    description: 'Разработал CRM систему на Vue'
+    description: 'Создание интернет-магазинов и CRM систем'
 
   }
 ];

@@ -1,0 +1,40 @@
+@import "../../styles/variables";
+
+
+.skill {
+  & + .skill {
+    margin-top: 20px;
+  }
+
+  &__title {
+    font-size: 22px;
+  }
+
+  &__range {
+    width: 100%;
+    position: relative;
+    &-value {
+      position: absolute;
+      top: -50%;
+      left: 50%;
+      display: inline-block;
+      padding: 5px 10px;
+      font-size: 12px;
+      transform: translate(-50%, -100%);
+      background: #fff;
+      color: #000;
+      border-radius: 15px;
+    }
+  }
+}
+
+@keyframes animateSkill {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 500% 0;
+  }
+}
+
+

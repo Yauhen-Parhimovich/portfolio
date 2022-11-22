@@ -2,6 +2,7 @@ import {useEffect} from 'react';
 
 const useCanvas = () => {
   useEffect(() => {
+
     window.requestAnimFrame = (function () {
       return window.requestAnimationFrame ||
         window.webkitRequestAnimationFrame ||
@@ -23,7 +24,7 @@ const useCanvas = () => {
     let hue = 120;
     const limiterTotal = 5;
     let limiterTick = 0;
-    const timerTotal = 80;
+    const timerTotal = window.innerWidth > 1200 ? 80 : window.innerWidth > 900 ? 100 : window.innerWidth > 700 ? 120 : 140;
     let timerTick = 0;
     let mousedown = false;
     let mx;
@@ -146,7 +147,7 @@ const useCanvas = () => {
     }
 
     function createParticles(x, y) {
-      let particleCount = 50;
+      let particleCount = window.innerWidth > 1200 ? 50 : window.innerWidth > 900 ? 30 : window.innerWidth > 700 ? 20 : 10;
       while (particleCount--) {
         particles.push(new Particle(x, y));
       }
@@ -213,10 +214,9 @@ const useCanvas = () => {
       }, 0)
     })
 
-    loop();
-
-
-
+    setTimeout(() => {
+      loop();
+    }, 11000)
 
   }, []);
 };

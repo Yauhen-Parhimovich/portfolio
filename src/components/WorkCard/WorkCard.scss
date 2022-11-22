@@ -30,6 +30,15 @@
     transform: skew(2deg, 4deg);
     filter: blur(50px);
     background: linear-gradient(315deg, $neon-color, #0e1438, $contrast-color-1);
+    @media (max-width: $breakpoint-m) {
+      filter: blur(50px);
+    }
+    @media (max-width: $breakpoint-s) {
+      filter: blur(30px);
+    }
+    @media (max-width: $breakpoint-xs) {
+      filter: blur(20px);
+    }
   }
   &__content {
     position: absolute;

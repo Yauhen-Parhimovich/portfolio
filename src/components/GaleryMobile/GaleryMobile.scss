@@ -1,0 +1,32 @@
+.gallery-mobile {
+  &__image {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 15px;
+    overflow-y: hidden;
+  }
+
+  &__wrapper {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__description {
+    width: 40%;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 10px 5px;
+    background: #fff;
+    z-index: 20;
+    border-radius: 0 5px 0px 0;
+  }
+}
+

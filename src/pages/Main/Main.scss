@@ -1,13 +1,19 @@
+@import "../../styles/variables";
+
 .main {
   position: relative;
   width: 100%;
+
   &-section {
-    min-height: 100vh;
     padding: 30px 10px;
     position: relative;
+    &__content {
+      min-height: 100%;
+    }
     &__wrapper {
       position: relative;
       z-index: 2;
+      min-height: 100vh;
     }
   }
 }
@@ -15,4 +21,102 @@
   position: absolute;
   top: 0;
   left: 0;
+}
+
+.main-portfolio {
+  &__text {
+    line-height: 140%;
+    margin: 20px 0;
+    @media (max-width: $breakpoint-s) {
+      font-size: 14px;
+    }
+  }
+}
+
+.about-section {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  @media (max-width: $breakpoint-s) {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  &__info {
+    flex: 0 0 48%;
+    margin-bottom: 20px;
+  }
+  &__data {
+    flex: 0 0 48%;
+  }
+  &__button {
+    margin-top: 20px;
+    text-align: center;
+
+  }
+  &__text {
+    max-width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 18px;
+    line-height: 140%;
+    @media (max-width: $breakpoint-s) {
+      font-size: 16px;
+    }
+  }
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100%;
+  &-bottom {
+    background: #181818;
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media (max-width: $breakpoint-m) {
+      min-height: 80px;
+    }
+    @media (max-width: $breakpoint-s) {
+      min-height: 60px;
+      font-size: 14px;
+    }
+    @media (max-width: $breakpoint-xs) {
+      min-height: 40px;
+    }
+  }
+}
+
+.contacts-section {
+  &__info {
+    flex: 0 0 48%;
+  }
+  &__data {
+    flex: 0 0 48%;
+    background: white;
+  }
+  &__button {
+    margin: 20px 20px 0;
+    text-align: center;
+    @media (max-width: $breakpoint-m) {
+      margin-bottom: 20px;
+    }
+  }
+  &__text {
+    max-width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 18px;
+    line-height: 140%;
+    @media (max-width: $breakpoint-s) {
+      font-size: 16px;
+    }
+  }
+
+  &__social {
+
+  }
 }

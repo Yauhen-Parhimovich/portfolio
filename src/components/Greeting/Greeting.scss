@@ -1,33 +1,144 @@
+@import "../../styles/variables";
+
 .greeting {
-
-
-
-  &__wrapper {
-
-  }
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
 
   &__item {
+    display: inline-block;
+    text-shadow: 0 0 0 $neon-color;
+    animation: smoky 3s 3s both;
+    animation-delay: 5s;
+    font-size: 55px;
+    font-weight: 700;
 
-  }
+    @media (max-width: $breakpoint-m) {
+      font-size: 48px;
+      animation-name: smoky-m;
+    }
 
-  &__video {
+    @media (max-width: $breakpoint-s) {
+      font-size: 42px;
+      text-shadow: none;
+      animation-name: smoky-s;
+    }
+    @media (max-width: $breakpoint-xs) {
+      font-size: 32px;
+      animation-name: smoky-xs;
+    }
+    &:nth-child(even) {
+      animation-name: smoky-mirror;
+      @media (max-width: $breakpoint-m) {
+        animation-name: smoky-mirror-m;
+      }
 
+      @media (max-width: $breakpoint-s) {
+        animation-name: smoky-mirror-s;
+      }
+      @media (max-width: $breakpoint-xs) {
+        animation-name: smoky-mirror-xs;
+      }
+    }
   }
 }
 
-@for $i from 1 through 50 {
-  .greeting__item:nth-child(#{$i}) {
-    animation-delay: 4.1s + $i * 1s;
-  }
-}
-
-@keyframes animateGreeting {
+@keyframes smoky {
   0% {
-
+    transform: translate3d(15rem, -8rem, 0) rotate(-40deg) skewX(70deg) scale(1.5);
+    text-shadow: 0 0 20px $neon-color;
+    opacity: 0;
   }
-
   100% {
 
+    text-shadow: 0 0 40px $neon-color;
   }
 }
 
+@keyframes smoky-mirror {
+  0% {
+    transform: translate3d(18rem, -8rem, 0) rotate(-40deg) skewX(-70deg) scale(2);
+    text-shadow: 0 0 20px $neon-color;
+    opacity: 0;
+  }
+  100% {
+    text-shadow: 0 0 40px $neon-color;
+  }
+}
+
+@keyframes smoky-m {
+  0% {
+    transform: translate3d(15rem, -8rem, 0) rotate(-40deg) skewX(70deg) scale(1.5);
+    text-shadow: 0 0 10px $neon-color;
+    opacity: 0;
+  }
+  100% {
+
+    text-shadow: 0 0 20px $neon-color;
+  }
+}
+
+@keyframes smoky-mirror-m {
+  0% {
+    transform: translate3d(18rem, -8rem, 0) rotate(-40deg) skewX(-70deg) scale(2);
+    text-shadow: 0 0 10px $neon-color;
+    opacity: 0;
+  }
+  100% {
+    text-shadow: 0 0 20px $neon-color;
+  }
+}
+
+@keyframes smoky-s {
+  0% {
+    transform: translate3d(15rem, -8rem, 0) rotate(-40deg) skewX(70deg) scale(1.5);
+    text-shadow: 0 0 5px $neon-color;
+    opacity: 0;
+  }
+  100% {
+
+    text-shadow: 0 0 10px $neon-color;
+  }
+}
+
+@keyframes smoky-mirror-s {
+  0% {
+    transform: translate3d(18rem, -8rem, 0) rotate(-40deg) skewX(-70deg) scale(2);
+    text-shadow: 0 0 5px $neon-color;
+    opacity: 0;
+  }
+  100% {
+    text-shadow: 0 0 10px $neon-color;
+  }
+}
+
+@keyframes smoky-xs {
+  0% {
+    transform: translate3d(15rem, -8rem, 0) rotate(-40deg) skewX(70deg) scale(1.5);
+    text-shadow: 0 0 2px $neon-color;
+    opacity: 0;
+  }
+  100% {
+
+    text-shadow: 0 0 5px $neon-color;
+  }
+}
+
+@keyframes smoky-mirror-xs {
+  0% {
+    transform: translate3d(18rem, -8rem, 0) rotate(-40deg) skewX(-70deg) scale(2);
+    text-shadow: 0 0 2px $neon-color;
+    opacity: 0;
+  }
+  100% {
+    text-shadow: 0 0 5px $neon-color;
+  }
+}
+
+@for $item from 1 through 300 {
+  span:nth-of-type(#{$item}) {
+    animation-delay: #{(3 + ($item/10))}s;
+  }
+}

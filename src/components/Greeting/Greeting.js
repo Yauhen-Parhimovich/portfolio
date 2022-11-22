@@ -1,19 +1,22 @@
 import './Greeting.scss';
+import {motion} from 'framer-motion';
 
 const Greeting = ({text}) => {
 
+  const item = {
+    hidden: { opacity: 0},
+    visible: { opacity: 1}
+  };
+
   const greeting = text.split('');
-
   return (
-    <div className='greeting__wrapper'>
-
+    <motion.div className="greeting__wrapper" variants={item}>
       <div className="greeting">
-      {/*<video className='greeting__video' src={video} autoPlay muted/>*/}
-        {greeting.map((item, index) => (
-          <span className="greeting__item" key={index} data-value={index}>{item}</span>
-        ))}
+        {greeting.map((item, index) => {
+          return <span className="greeting__item" key={index} data-value={index}>{item === ' ' ? <span>&nbsp;</span> : item === '\n' ? <div style={{width: '100vw'}}> </div>  : item}</span>;
+        })}
       </div>
-    </div>
+    </motion.div>
 
   );
 };

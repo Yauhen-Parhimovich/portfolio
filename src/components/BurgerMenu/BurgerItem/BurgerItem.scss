@@ -12,9 +12,29 @@
     }
   }
   &__link {
-    color: black;
+    color: #fff;
     &.active {
-      color: $contrast-color-1;
+      color: #fff;
+      text-shadow: 0 0 10px $neon-color,
+      0 0 20px $neon-color,
+      0 0 40px $neon-color,
+      0 0 60px $neon-color,
+      0 0 80px $neon-color;
+      @media (max-width: $breakpoint-m) {
+        text-shadow: 0 0 10px $neon-color,
+        0 0 20px $neon-color,
+        0 0 40px $neon-color,
+        0 0 60px $neon-color,
+      }
+      @media (max-width: $breakpoint-s) {
+        text-shadow: 0 0 10px $neon-color,
+        0 0 20px $neon-color,
+        0 0 40px $neon-color,
+      }
+      @media (max-width: $breakpoint-xs) {
+        text-shadow: 0 0 10px $neon-color,
+        0 0 20px $neon-color,
+      }
     }
   }
 

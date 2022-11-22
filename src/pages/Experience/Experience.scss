@@ -1,5 +1,20 @@
+@import "../../styles/variables";
+
 .experience {
   padding: 20px 10px;
+
+  &__button {
+    display: inline-block;
+    margin: 10px 0 0 20px;
+    a {
+      color: inherit;
+    }
+  }
+
+  &__skills {
+    margin-top: 30px;
+    padding: 0 20px;
+  }
 
   &__title {
       padding: 20px;
@@ -8,13 +23,32 @@
     display: flex;
     gap: 10px;
     justify-content: space-between;
+    @media (max-width: $breakpoint-s) {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+    }
   }
 
   &__text {
-    flex: 0 0 45%;
+    flex: 0 0 50%;
   }
 
   &__date {
-    flex: 0 0 45%;
+    flex: 0 0 50%;
+    padding: 10px;
+  }
+
+  &__info {
+    padding: 5px 10px;
+    @media (max-width: $breakpoint-s) {
+      font-size: 14px;
+    }
+
+  }
+
+  &__about {
+    line-height: 140%;
+    text-align: center;
   }
 }

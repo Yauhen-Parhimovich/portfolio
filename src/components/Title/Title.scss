@@ -8,9 +8,18 @@
   text-shadow: 0 0 10px $neon-color,
                0 0 20px $neon-color,
                0 0 40px $neon-color,
-               0 0 60px $neon-color,
-               0 0 80px $neon-color;
-
+               0 0 60px $neon-color;
+  @media (max-width: $breakpoint-m) {
+    font-size: 36px;
+    text-shadow: 0 0 10px $neon-color,
+                  0 0 20px $neon-color,
+                  0 0 40px $neon-color,
+  }
+  @media (max-width: $breakpoint-s) {
+    font-size: 32px;
+    text-shadow: 0 0 10px $neon-color,
+    0 0 20px $neon-color,
+  }
   &__box {
     padding: 20px 45px;
     height: 200px;
@@ -19,6 +28,18 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    @media (max-width: $breakpoint-m) {
+      height: 160px;
+      padding: 15px 40px;
+    }
+    @media (max-width: $breakpoint-s) {
+      height: 140px;
+      padding: 10px 30px;
+    }
+    @media (max-width: $breakpoint-xs) {
+      height: 120px;
+      padding: 5px 20px;
+    }
     &::before {
       content: '';
       position: absolute;
@@ -31,9 +52,12 @@
       z-index: 2;
       box-shadow: 0 0 10px $neon-color,
                   0 0 20px $neon-color,
-                  0 0 40px $neon-color,
-                  0 0 60px $neon-color;
+                  0 0 40px $neon-color;
       animation: animateLightBar 5s linear infinite;
+      @media (max-width: $breakpoint-m) {
+        box-shadow: 0 0 10px $neon-color,
+                    0 0 20px $neon-color;
+      }
     }
     &::after {
       content: '';

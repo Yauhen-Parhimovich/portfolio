@@ -1,4 +1,6 @@
 @import "../../styles/variables";
+$fa-font-path:   "../font";
+
 
 .social-links {
   &__list {
@@ -9,19 +11,76 @@
     margin-top: 20px;
   }
   &__item {
+
+
+    &:nth-child(1)::before {
+    }
+    &:nth-child(2)::before {
+    }
+    &:nth-child(3)::before {
+    }
+
+
+
     & + .social-links__item {
       margin-left: 20px;
     }
   }
   &__link {
+    display: inline-block;
+    position: relative;
+    padding: 10px 5px;
+    font-family: 'fontAwesome';
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 0;
+      border-bottom: 2px solid #45f3ff;
+      transition: 0.5s ease-in-out;
+      text-align: center;
+      line-height: 61px;
+      font-size: 40px;
+      color: #45f3ff;
+      overflow: hidden;
+    }
+    &:hover::before {
+      height: 100%;
+    }
+    .fa {
+      font-size: 40px;
+      -webkit-text-stroke: 1px #45f3ff;
+      color: transparent;
+    }
+
+    &-github::before {
+      content: "\f09b";
+
+    }
+
+    &-linkedin::before {
+      content: "\f08c";
+
+    }
+
+    &-telegram::before {
+      content: "\f2c6";
+
+    }
 
   }
   &__icon {
-    width: 16px;
-    height: 16px;
+    width: 30px;
+    height: 30px;
     transition: 0.2s;
+    -webkit-text-stroke: 2px #f00;
+    fill: transparent;
     &:hover {
       fill: $contrast-color-1;
     }
   }
 }
+
+

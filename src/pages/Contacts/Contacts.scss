@@ -1,15 +1,40 @@
 @import "../../styles/variables";
 
 .contacts {
-  padding: 20px 10px;
+  padding: 20px 10px 0 10px;
+
+  &__info {
+    padding: 10px;
+    background: #181818;
+    margin-bottom: 20px;
+    border-radius: 15px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    + .contacts__item {
+      margin-top: 10px;
+    }
+    &-icon svg {
+      fill: $contrast-color-2;
+      height: 20px;
+      width: auto;
+      margin-right: 10px;
+    }
+    &-text {
+      color: white;
+    }
+  }
 
   &__content {
     display: flex;
     justify-content: space-between;
     gap: 10px;
     @media (max-width: $breakpoint-m) {
-      display: block;
-      margin: 0 auto;
+      flex-direction: column;
+      justify-content: start;
+      align-items: center;
     }
   }
   &__form {

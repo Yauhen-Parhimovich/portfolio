@@ -15,6 +15,12 @@
   font-size: 20px;
   transition: 0.5s;
   transition-delay: 0s;
+  @media (max-width: $breakpoint-s) {
+    font-size: 18px;
+  }
+  @media (max-width: $breakpoint-xs) {
+    font-size: 15px;
+  }
   &__content {
     position: relative;
     z-index: 5;
@@ -26,6 +32,9 @@
                 0 0 20px $contrast-color-2,
                 0 0 40px $contrast-color-2,
                 0 0 60px $contrast-color-2;
+    @media (max-width: $breakpoint-s) {
+      box-shadow: none;
+    }
     &::before {
       width: 60%;
       height: 104%;
@@ -41,7 +50,6 @@
       box-shadow: -5px 0 0 $contrast-color-2,
                   -5px 0 0 $contrast-color-2;
       transition-delay: 0s, 0.5s, 1s, 1s;
-
     }
   }
   &::before {

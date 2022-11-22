@@ -1,10 +1,32 @@
 import {MapContainer, Marker, TileLayer} from 'react-leaflet';
 import {renderToStaticMarkup} from 'react-dom/server';
 import {divIcon} from 'leaflet/src/layer';
+import {motion} from 'framer-motion';
 
 import './Map.scss';
+import {useEffect, useState} from 'react';
 
 const Map = () => {
+
+  const animationVariants = {
+    hidden: {
+      translateY: -1000,
+      transition: {}
+    },
+    visible: {
+      translateY: [-1000, 20, -20, 10, -10, 5, -5, 0],
+      transition: {
+        times: [0, 0.15, 0.25, 0.45, 0.55, 0.75, 0.85, 1],
+        duration: 4,
+        delay: 3.5
+      }
+    }
+  };
+
+  const noAnimation = {
+    hidden: {},
+    visible: {}
+  }
 
   const iconMarkup = renderToStaticMarkup(
     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="35" height="58" viewBox="0 0 256 448" fill={'red'}>
@@ -16,23 +38,36 @@ const Map = () => {
     html: iconMarkup
   });
 
+  const [width, setWidth] = useState(0)
+  useEffect(() => {
+    setWidth(window.innerWidth)
+  }, [])
+
   return (
-    <div className="map">
-      <MapContainer
-        center={[54.10485272254978, 28.334259535375054]}
-        zoom={7}
-        style={{height: '80%', width: '100%'}}
-      >
-        <Marker
-          icon={customMarkerIcon}
-          position={[54.10485272254978, 28.334259535375054]}
-        />
-        <TileLayer
-          attribution='&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
-          url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
-        />
-      </MapContainer>
-    </div>
+    <motion.div
+      className="map"
+      initial="hidden"
+      animate="visible"
+      variants={width > 992 ? animationVariants : noAnimation}
+    >
+      <div className="map__wrapper">
+
+        <MapContainer
+          center={[54.10485272254978, 28.334259535375054]}
+          zoom={7}
+          style={{height: '100%', width: '100%'}}
+        >
+          <Marker
+            icon={customMarkerIcon}
+            position={[54.10485272254978, 28.334259535375054]}
+          />
+          <TileLayer
+            url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
+          />
+        </MapContainer>
+      </div>
+
+    </motion.div>
   );
 };
 

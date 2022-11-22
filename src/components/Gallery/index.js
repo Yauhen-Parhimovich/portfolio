@@ -59,9 +59,13 @@ export class ExplosionGallery {
     </div>
     <div class="${explosionControlsClassName}">
       <div class="${explosionNavsClassName}">
-        <button class="${explosionNavClassName} ${explosionNavPrevClassName}"></button>
+        <button class="${explosionNavClassName} ${explosionNavPrevClassName}">
+          <i class="fa fa-arrow-up" aria-hidden="true"></i>
+        </button>
         <div class="${explosionCounterClassName}">1/${this.size}</div>
-        <button class="${explosionNavClassName} ${explosionNavNextClassName}"></button>
+        <button class="${explosionNavClassName} ${explosionNavNextClassName}">
+          <i class="fa fa-arrow-down" aria-hidden="true"></i>
+        </button>
       </div>
     </div>
     <div class="${explosionImagesClassName}">
@@ -282,7 +286,7 @@ export class ExplosionGallery {
     }
 
     this.switchChanges(true);
-  }
+  };
 
   setImageStyles(element, {
     top,

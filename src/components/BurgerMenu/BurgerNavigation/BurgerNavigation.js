@@ -4,6 +4,7 @@ import BurgerItem from '../BurgerItem/BurgerItem';
 import {router} from '../../../router';
 
 import './BurgerNavigation.scss'
+import SocialLinksMenu from '../../SocialLinksMenu/SocialLinksMenu';
 
 const BurgerNavigation = () => {
 

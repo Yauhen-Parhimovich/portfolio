@@ -123,6 +123,7 @@
   position: absolute;
   width: 500px;
   object-fit: cover;
+  object-position: top;
   display: block;
   z-index: 2;
   height: auto;
@@ -198,19 +199,19 @@
   width: 3rem;
   height: 3rem;
   border-radius: 50%;
-  border: 3px solid #000;
-  background-color: transparent;
-  background-repeat: no-repeat;
-  background-size: 80%;
-  background-position: center;
   cursor: pointer;
   text-align: center;
   opacity: 1;
-  transition: background-color .5s opacity .5s
+  transition: 0.3s;
+  background: transparent;
+  font-size: 40px;
+  color: $contrast-color-2;
 }
 
 .explosionNav:hover {
-  background-color: #000
+  background-color: $contrast-color-2;
+  color: black;
+  opacity: 0.7;
 }
 
 .explosionNav:disabled {
@@ -218,24 +219,9 @@
   opacity: .3
 }
 
-.explosionNavPrev {
-  background: $contrast-color-2;
-}
-
-.explosionNavPrev:hover {
-  background: $contrast-color-1;
-}
-
-.explosionNavNext {
-  background: $contrast-color-2;
-}
-
-.explosionNavNext:hover {
-  background: $contrast-color-1;
-}
-
 .explosionCounter {
   font-weight: 700;
   font-size: 1.2rem;
-  padding: 1rem 0
+  padding: 1rem 0;
+  color: darkgrey;
 }
